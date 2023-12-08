@@ -1,0 +1,143 @@
+:root {
+    --grey2: #EAEAEA;
+    --background :#F6F6F6;
+}
+
+body {
+    font-family: Roboto;
+    font-size: 16px;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    header {
+        width: 100%;
+        height: 96px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .h-nav {
+            .logo {
+                width: 200px;
+            }
+        }
+    }
+
+    .location {
+            width: 100%;
+            background-color: var(--grey2);
+            display: flex;
+            justify-content: center;
+            font-family: Roboto;
+            font-size: 16px;
+        }
+
+    .index-top {
+        background-color: blue;
+        padding: 30px 0;
+        .index-title {
+            display: flex;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .index-presentation {
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        .explore-button {
+            width: 218px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: #9356DC;
+        }
+    }       
+    
+    .fonctionnement {
+        padding: 50px 180px;
+
+        h2 {
+            font-family: Roboto;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .info-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            .info-box {
+            width: 322px;
+            height: 72px;
+            border-radius: 20px;
+            background-color: var(--background);
+            
+                .info-box-number {
+                    background-color: #9356DC;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 24px;
+                }
+            }
+        }
+    }
+
+    .restaurants {
+        background-color: var(--background);
+        padding: 30px 180px;
+        height: fit-content;
+
+        .cards-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .restaurant-card {
+                width: 490px;
+                height: 251px;
+                display: flex;
+                flex-direction: column;
+                border-radius: 15px;
+                background-color: white;
+                margin-bottom: 50px;
+
+                .restaurant-card-img {
+                    width: 100%;
+                    height: 180px;
+                    object-fit: cover;
+                    border-radius: 15px 15px 0 0;
+                }
+            
+                .restaurant-name {
+                    color: #000;
+                    font-family: Roboto;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    margin: 10px 0 0 18px;
+                }
+
+                .restaurant-location {
+                    color: #000;
+                    font-family: Roboto;
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    margin: 5px 18px;
+                }
+            }
+        }
+    }
+}
