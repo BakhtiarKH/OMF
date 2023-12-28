@@ -30,15 +30,13 @@ body .restaurant-menu-img img {
   height: 275px;
 }
 body .main-container-menu {
-  margin: 0;
+  margin: 0 0 -40px 0;
+  padding: 0 0 40px 0;
   width: 100%;
   background-color: #F6F6F6;
   position: relative;
-  bottom: 40px;
+  top: -40px;
   border-radius: 40px 40px 0px 0px;
-  opacity: 0;
-  transition: opacity 1s linear 1s;
-  opacity: 1;
 }
 body .main-container-menu .main-container-head {
   display: flex;
@@ -88,6 +86,9 @@ body .main-container-menu .main-container-head .heart-block:hover .like-colored 
 body .main-container-menu .menu-cat {
   padding: 0 13px;
   margin-bottom: 40px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
 }
 body .main-container-menu .menu-cat .line {
   margin: 9px 0 0 0;
@@ -102,23 +103,9 @@ body .main-container-menu .menu-cat .menu-cat-title {
   font-weight: 300;
   margin: 0;
 }
-body .main-container-menu .menu-cat .menu-choice {
-  display: flex;
-  justify-content: space-between;
-  max-width: 100%;
-  max-height: 72px;
-  padding: 15px;
-  background-color: white;
-  border-radius: 15px;
-  margin-top: 12px;
-  text-decoration: none;
-}
-body .main-container-menu .menu-cat .menu-choice .menu-info {
-  display: flex;
-  flex-direction: column;
-}
-body .main-container-menu .menu-cat .menu-choice .menu-info .menu-choice-title {
-  margin: 0 0 5px 0;
+body .main-container-menu .menu-cat .menu-choice-title {
+  margin: 0 0 0 0;
+  line-height: normal;
   color: black;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -127,7 +114,57 @@ body .main-container-menu .menu-cat .menu-choice .menu-info .menu-choice-title {
   font-size: 18px;
   font-weight: 500;
 }
-body .main-container-menu .menu-cat .menu-choice .menu-info .menu-choice-description {
+body .main-container-menu .menu-cat .menu-choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-height: 72px;
+  background-color: white;
+  border-radius: 15px;
+  margin-top: 12px;
+  text-decoration: none;
+}
+body .main-container-menu .menu-cat .menu-choice:hover .slide {
+  animation-name: slide;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+@keyframes slide {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60px;
+  }
+}
+body .main-container-menu .menu-cat .menu-choice .slide {
+  height: 72px;
+  margin: 0;
+  width: 0px;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+}
+body .main-container-menu .menu-cat .menu-choice .main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
+}
+body .main-container-menu .menu-cat .menu-choice .main-content .menu-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .main-container-menu .menu-cat .menu-choice .main-content .menu-info .price {
+  margin: 0 0 0 5px;
+  color: #353535;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 700;
+}
+body .main-container-menu .menu-cat .menu-choice .main-content .menu-info .menu-choice-description {
   margin: 0;
   color: black;
   overflow: hidden;
@@ -137,12 +174,47 @@ body .main-container-menu .menu-cat .menu-choice .menu-info .menu-choice-descrip
   font-size: 15px;
   font-weight: 300;
 }
-body .main-container-menu .menu-cat .menu-choice .price {
-  color: #353535;
-  text-align: center;
-  font-family: Roboto;
-  font-size: 15px;
-  font-weight: 700;
+body .main-container-menu .mc1 {
+  animation-delay: 0s;
+  animation-name: spawn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes spawn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body .main-container-menu .mc2 {
+  animation-delay: 1s;
+  animation-name: spawn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes spawn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body .main-container-menu .mc3 {
+  animation-delay: 2s;
+  animation-name: spawn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes spawn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 body .main-container-menu .order-button-block {
   display: flex;
@@ -211,8 +283,9 @@ body footer .footer-link .footer-icon {
     justify-content: flex-start;
   }
   body .main-container-menu {
+    margin: 0 auto -40px auto;
+    padding: 0 0 40px 0;
     max-width: 1055px;
-    margin: 0 auto;
   }
   body .main-container-menu .main-container-head {
     display: flex;
