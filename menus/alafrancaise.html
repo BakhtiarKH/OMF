@@ -1,85 +1,134 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&family=Shrikhand&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link type="stylesheet" href="../CSS/style.css">
-        <title>À la française - Menu</title>
+        <link rel="stylesheet" href="../CSS/stylemenu.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        <title>La palette du goût - Menu</title>
     </head>
-    <header>
-        <nav class="back-button">
-            <a href="../index.html">fleche</a>
-        </nav>
-        <img class="logo" src="../images/logo/ohmyfood.png">
-    </header>
+    
     <body>
-    <section class="restaurant-menu-img">
-        <img src="../images/restaurants/resto1.jpg">
-    </section>
-    <main class="main-container-menu">
-        <h1 class="resteaurant-menu-name">À la française</h1>
-        <div class="menu-cat">
-            <h3 class="menu-cat-title">ENTRÉES</h3>
-            <a class="menu-choice" href="#">
-                <h1 class="menu-choice-title">Tartare de poulpe acidulé</h1>
-                <p class="menu-choice-description">Aux zestes d'orange</p>
-                <p class="price">25€</p>
-            </a>
-            <a class="menu-choice" href="#">
-                <h1 class="menu-choice-title">Velouté de légumes d'antan</h1>
-                <p class="menu-choice-description">Carotte, panais, topinambour</p>
-                <p class="price">35€</p>
-            </a>
-            <a class="menu-choice" href="#">
-                <h1 class="menu-choice-title">Soupe à l'oignon</h1>
-                <p class="menu-choice-description">Revisitée</p>
-                <p class="price">20€</p>
-            </a>
-        </div>
-        <div class="menu-cat">
-            <h3 class="menu-cat-title">PLATS</h3>
-            <a class="menu-choice" href="#">
-                <h1 class="menu-choice-title">Coquilles Saint-Jacques</h1>
-                <p class="menu-choice-description">Accompagnées d'une purée de panais</p>
-                <p class="price">40€</p>
-            </a>
-            <a class="menu-choice" href="#">
-                <h1 class="menu-choice-title">Magret de canard</h1>
-                <p class="menu-choice-description">Et parmentier de pommes de terre</p>
-                <p class="price">35€</p>
-            </a>
-            <a class="menu-choice" href="#">
-                <h1 class="menu-choice-title">Pigeonneau d’Ille-et-Vilaine</h1>
-                <p class="menu-choice-description">Sur son lit de gnocchis aux légumes</p>
-                <p class="price">44€</p>
-            </a>
-        </div>
-        <div class="menu-cat">
-            <h3 class="menu-cat-title">DESSERTS</h3>
-            <a class="menu-choice" href="#">
-                <h1 class="menu-choice-title">Pétales de violettes glacés</h1>
-                <p class="menu-choice-description">Et purée de noisettes</p>
-                <p class="price">18€</p>
-            </a>
-            <a class="menu-choice" href="#">
-                <h1 class="menu-choice-title">Fondant au chocolat</h1>
-                <p class="menu-choice-description">Revisité</p>
-                <p class="price">22€</p>
-            </a>
-            <a class="menu-choice" href="#">
-                <h1 class="menu-choice-title">Millefeuille croustillant</h1>
-                <p class="menu-choice-description">Myrtilles et pâte d’amande</p>
-                <p class="price">23€</p>
-            </a>
-        </div>
-        <button class="command" action="#">Commander</button>
-    </main>
+        <header>
+            <a href="../index.html" class="back-button"><img src="../images/icons/GoBack.svg"></a>
+            <p class="logo">ohmyfood</p>
+        </header>
+        <section class="restaurant-menu-img">
+            <img src="../images/restaurants/resto1.jpg">
+        </section>
+        <main class="main-container-menu">
+            <div class="main-container-head">
+                <h1 class="restaurant-menu-name">À la française</h1>
+                <div class="heart-block">
+                    <i class="fa-regular fa-heart"></i><img class="like-colored" src="../images/icons/Like-colored.svg">
+                </div>
+            </div>
+            <div class="menu-cat mc1">
+                <h3 class="menu-cat-title">ENTRÉES</h3>
+                <p class="line"> </p>
+                <a class="menu-choice" href="#">
+                    <div class="main-content">
+                        <h1 class="menu-choice-title">Tartare de poulpe acidulé</h1>
+                        <div class="menu-info">
+                            <p class="menu-choice-description">Aux zestes d'orange</p><p class="price">25€</p>
+                        </div>
+                    </div>
+                    <img class="slide" src="../images/icons/select.svg">
+                </a>
+                <a class="menu-choice" href="#">
+                    <div class="main-content">
+                        <h1 class="menu-choice-title">Velouté de légumes d'antan</h1>
+                        <div class="menu-info">
+                            <p class="menu-choice-description">Carotte, panais, topinambour</p><p class="price">35€</p>
+                        </div>
+                    </div>
+                    <img class="slide" src="../images/icons/select.svg">
+                </a>
+                <a class="menu-choice" href="#">
+                    <div class="main-content">
+                        <h1 class="menu-choice-title">Soupe à l'oignon</h1>
+                        <div class="menu-info">
+                            <p class="menu-choice-description">Revisitée</p><p class="price">20€</p>
+                        </div>
+                    </div>
+                    <img class="slide" src="../images/icons/select.svg">
+                </a>
+            </div>
+            <div class="menu-cat mc2">
+                <h3 class="menu-cat-title">PLATS</h3>
+                <p class="line"> </p>
+                <a class="menu-choice" href="#">
+                    <div class="main-content">
+                        <h1 class="menu-choice-title">Coquilles Saint-Jacques</h1>
+                        <div class="menu-info">
+                            <p class="menu-choice-description">Accompagnées d'une purée de panais</p><p class="price">40€</p>
+                        </div>
+                    </div>
+                    <img class="slide" src="../images/icons/select.svg">
+                </a>
+                <a class="menu-choice" href="#">
+                    <div class="main-content">
+                        <h1 class="menu-choice-title">Magret de canard</h1>
+                        <div class="menu-info">
+                            <p class="menu-choice-description">Et parmentier de pommes de terre</p><p class="price">35€</p>
+                        </div>
+                    </div>
+                    <img class="slide" src="../images/icons/select.svg">
+                </a>
+                <a class="menu-choice" href="#">
+                    <div class="main-content">
+                        <h1 class="menu-choice-title">Pigeonneau d’Ille-et-Vilaine</h1>
+                        <div class="menu-info">
+                            <p class="menu-choice-description">Sur son lit de gnocchis aux légumes</p><p class="price">44€</p>
+                        </div>
+                    </div>
+                    <img class="slide" src="../images/icons/select.svg">
+                </a>
+            </div>
+            <div class="menu-cat mc3">
+                <h3 class="menu-cat-title">DESSERTS</h3>
+                <p class="line"> </p>
+                <a class="menu-choice" href="#">
+                    <div class="main-content">
+                        <h1 class="menu-choice-title">Pétales de violettes glacés</h1>
+                        <div class="menu-info">
+                            <p class="menu-choice-description">Et purée de noisettes</p><p class="price">18€</p>
+                        </div>
+                    </div>
+                    <img class="slide" src="../images/icons/select.svg">
+                </a>
+                <a class="menu-choice" href="#">
+                    <div class="main-content">
+                        <h1 class="menu-choice-title">Fondant au chocolat</h1>
+                        <div class="menu-info">
+                            <p class="menu-choice-description">Revisité</p><p class="price">22€</p>
+                        </div>
+                    </div>
+                    <img class="slide" src="../images/icons/select.svg">
+                </a>
+                <a class="menu-choice" href="#">
+                    <div class="main-content">
+                        <h1 class="menu-choice-title">Millefeuille croustillant</h1>
+                        <div class="menu-info">
+                            <p class="menu-choice-description">Myrtilles et pâte d’amande</p><p class="price">23€</p>
+                        </div>
+                    </div>
+                <img class="slide" src="../images/icons/select.svg">
+                </a>
+            </div>
+            <div class="order-button-block">
+                <button class="order-button" action="#">Commander</button>
+            </div>
+        </main>
+        <footer>
+            <p class="footer-logo">ohmyfood</p>
+            <a class="footer-link" href="#"><img class="footer-icon" src="../images/icons/Vector.svg">Proposer un restaurant</a>
+            <a class="footer-link" href="#"><img class="footer-icon" src="../images/icons/Vector2.svg">Devenir partenaire</a>
+            <a class="footer-link" href="#">Mention légales</a>
+            <a class="footer-link" href="#">Contact</a>
+        </footer>
     </body>
-    <footer>
-        <img class="footer-logo" src="../images/logo/ohmyfood@2x.svg">
-        <a class="footer-link" href="#">Proposer un restaurant</a>
-        <a class="footer-link" href="#">Devenir partenaire</a>
-        <a class="footer-link" href="#">Mention légales</a>
-        <a class="footer-link" href="#">Contact</a>
-    </footer>
 </html>
