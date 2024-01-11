@@ -4,6 +4,33 @@ body {
   height: fit-content;
   margin: 0;
 }
+body .loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #99E2D0;
+  border-bottom-color: #9356DC;
+  border-radius: 50%;
+  animation: rotation 1s linear forwards;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
 body header {
   width: 100%;
   height: 63px;
@@ -30,6 +57,7 @@ body .restaurant-menu-img img {
   height: 275px;
 }
 body .main-container-menu {
+  opacity: 0;
   margin: 0 0 -40px 0;
   padding: 0 0 40px 0;
   width: 100%;
@@ -37,6 +65,18 @@ body .main-container-menu {
   position: relative;
   top: -40px;
   border-radius: 40px 40px 0px 0px;
+  animation-delay: 1s;
+  animation-name: spawn;
+  animation-duration: 0s;
+  animation-fill-mode: forwards;
+}
+@keyframes spawn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 body .main-container-menu .main-container-head {
   display: flex;
@@ -175,7 +215,7 @@ body .main-container-menu .menu-cat .menu-choice .main-content .menu-info .menu-
   font-weight: 300;
 }
 body .main-container-menu .mc1 {
-  animation-delay: 0s;
+  animation-delay: 2s;
   animation-name: spawn;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -189,7 +229,7 @@ body .main-container-menu .mc1 {
   }
 }
 body .main-container-menu .mc2 {
-  animation-delay: 1s;
+  animation-delay: 3s;
   animation-name: spawn;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -203,7 +243,7 @@ body .main-container-menu .mc2 {
   }
 }
 body .main-container-menu .mc3 {
-  animation-delay: 2s;
+  animation-delay: 4s;
   animation-name: spawn;
   animation-duration: 1s;
   animation-fill-mode: forwards;
