@@ -299,12 +299,25 @@ body {
             font-weight: 400;
         }
 
-        .footer-link {
-            color: white;
-            font-family: Roboto;
-            font-size: 16px;
-            font-weight: 500;
-            text-decoration: none;
+        .footer-link-group {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+
+            .footer-link1 {
+                color: white;
+                font-family: Roboto;
+                font-size: 16px;
+                font-weight: 500;
+                text-decoration: none;
+            }
+            .footer-link2 {
+                color: white;
+                font-family: Roboto;
+                font-size: 16px;
+                font-weight: 500;
+                text-decoration: none;
+            }
 
             .footer-icon {
                 margin-right: 11px;
@@ -350,30 +363,42 @@ body {
                 margin: 0 auto 40px auto;
             }
         }
+
         footer {
             display: flex;
             flex-direction: row-reverse;
             max-width: 1440px;
-            height: 114px;
+            height: 54px;
             padding: 30px 25px;
             align-items: flex-end;
             gap: 16px;
             flex-shrink: 0;
 
             .footer-logo {
-                margin: 0 16px 0 0;
+                margin: 0 16px 0 20px;
             }
 
-            .footer-link1 {
-                margin: 0;
-                width: 192px;
-                height: 19px;
-            }
+            .footer-link-group {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                gap: 16px;
+                .footer-link1 {
+                    margin: 0;
+                    width: 190px;
+                }
 
-            .footer-link2 {
-                margin: 0;
-                width: 168px;
+                .footer-link2 {
+                    margin: 0;
+                    max-width: 130px;
+                }
             }
         }
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-link2 {
+        width: 130px;
     }
 }
