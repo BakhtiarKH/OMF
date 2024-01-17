@@ -3,6 +3,18 @@
     --background :#F6F6F6;
 }
 
+@mixin spin-animation($delay, $duration) {
+    animation-delay: $delay;
+    animation-name: spawn;
+    animation-duration: $duration;
+    animation-fill-mode: forwards;
+    @keyframes spawn {
+        0%   { opacity: 1; }
+        100% { opacity: 0; display: none; }
+    }
+}
+
+
 body {
     font-family: Roboto;
     font-size: 16px;
@@ -11,6 +23,50 @@ body {
     flex-direction: column;
     margin: 0 auto;
 
+    .loader {
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(10px);
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1000;
+        @include spin-animation(1s, 0s);
+
+        .loader-spin {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #99E2D0;
+            border-bottom-color: #9356DC;
+            border-radius: 50%;
+            animation: rotation 1s linear forwards;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 1001;
+        }
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+        99% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: rotate(360deg);
+        }
+    } 
     a {
         text-decoration: none;
     }
