@@ -248,7 +248,7 @@ body .restaurants .cards-group .restaurant-card .restaurant-name {
   display: flex;
   justify-content: space-between;
 }
-body .restaurants .cards-group .restaurant-card .restaurant-name h1 {
+body .restaurants .cards-group .restaurant-card .restaurant-name h2 {
   font-family: Roboto;
   font-size: 18px;
   font-weight: 700;
