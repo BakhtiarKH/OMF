@@ -173,6 +173,7 @@ body .fonctionnement .info-group .info-box {
 }
 body .fonctionnement .info-group .info-box .info-icon {
   margin: 0 17px 0 10px;
+  color: black;
 }
 body .fonctionnement .info-group .info-box .info-box-number {
   display: flex;
@@ -186,6 +187,10 @@ body .fonctionnement .info-group .info-box .info-box-number {
   border-radius: 14px;
   position: relative;
   right: 13px;
+}
+body .fonctionnement .info-group .info-box:hover .info-icon {
+  cursor: pointer;
+  color: #9356DC;
 }
 body .restaurants {
   background-color: var(--background);
